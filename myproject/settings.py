@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'diplomproject',
         'USER': 'lo',
-        'PASSWORD': '123',
+        'PASSWORD': '1231',
         'HOST': 'localhost',
         'PORT': '',
     }

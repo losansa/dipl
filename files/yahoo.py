@@ -25,13 +25,13 @@ data.head()
 # Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo]
   # valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
 from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column
-engine = create_engine('postgresql://lunalo108:108Angel@localhost:5432/myproject')
+engine = create_engine('postgresql://lo:123@localhost:5432/diplomproject')
 
 # from .models import Quotes_Name
 # for quotes_name in Quotes_Name:
 # data = yf.download(tickers=quotes_name, period="2d", interval="1mo")
 tickers_list = ['MOEXBC.ME', 'IMOEX.ME', 'RVI.ME', 'MOEX10.ME', 'RTSI.ME', 'RGBI.ME']
-data = yf.download(tickers="IMOEX.ME", period="1mo", interval="5m")
+data = yf.download(tickers="MOEXBC.ME", period="1mo", interval="5m")
 # meta = MetaData()
 print(data.tail())
 
@@ -47,7 +47,7 @@ print(data.tail())
 #               )
 data = data.reset_index()
 data.rename(columns={'Open': 'q_open', 'High': 'q_high', 'Low': 'q_low', 'Close': 'q_close', 'Adj Close': 'q_adj_close', 'Volume': 'q_volume','Datetime': 'date_time'}, inplace=True)
-data['q_name_id'] = 2
+data['q_name_id'] = 1
 # print(data.columns.tolist())
 data['date_time'] = data['date_time'].map(lambda x: str(x)[:19]) 
 print(data.tail())

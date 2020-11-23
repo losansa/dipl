@@ -25,7 +25,7 @@ SECRET_KEY = 'geprp6j_^h3-7h$5b1g9mw+2grjhj=&%&)jh3jmna-kw-n#abf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.87']
+ALLOWED_HOSTS = ['192.168.1.149']
 
 
 # Application definition
@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages'
+    'pages',
+    'profiles',
+    'trade',
+    'bootstrap4',
+    'django_filters',
+    'django_tables2'
 ]
 
 MIDDLEWARE = [
@@ -77,7 +82,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'diplomproject',
+        'NAME': 'myproject',
         'USER': 'lo',
         'PASSWORD': '123',
         'HOST': 'localhost',
@@ -108,9 +113,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 

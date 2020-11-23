@@ -25,7 +25,7 @@ data.head()
 # Valid intervals: [1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo]
   # valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
 from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column
-engine = create_engine('postgresql://lo:123@localhost:5432/diplomproject')
+engine = create_engine('postgresql://lo:123@localhost:5432/myproject')
 
 # from .models import Quotes_Name
 # for quotes_name in Quotes_Name:
